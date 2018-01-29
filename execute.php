@@ -28,7 +28,7 @@ if($text == '!network'){
             'Current block: '.json_decode($json2,true).chr(10).
             //'Current USD Value: '.json_decode($json3,true).chr(10).
             'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).chr(10).
-            'For info on this bot type !help'
+            '✅For info on this bot type !help'
     );
     $parameters["method"] = "sendMessage";
 //$parameters["reply_markup"] = '{ "keyboard": [["uno", "due"], ["tre", "quattro"], ["cinque"]], "resize_keyboard": true, "one_time_keyboard": false}';
@@ -39,7 +39,7 @@ else if($text == '!price'){
         '💰 UFO Coin Value 💰'.chr(10).chr(10).
         'Current USD Value: '.number_format(json_decode($json3,true)).chr(10).
         'Current BTC Value: '.number_format(json_decode($json5,true)).chr(10).chr(10).
-        'For info on this bot type !help'
+        '✅For info on this bot type !help'
     );
     $parameters["method"] = "sendMessage";
 }
@@ -53,7 +53,7 @@ else if($text == '!help'){
         '!price - bot will reply with USD and BTC current value.'.chr(10).
         '!help - show this instructions.'.chr(10).chr(10).
         'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
-        'If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
+        '✅ If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
     $parameters["method"] = "sendMessage";
 }
 ;
