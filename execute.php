@@ -47,9 +47,12 @@ else if($text == '!help'){
     header("Content-Type: application/json");
     $parameters = array('chat_id' => $chatId, "text" =>
         '🕳 UFO Coin Info Bot 🕳'.chr(10).
-        'developed with ❤ by @docsimo85'.chr(10).
-        'Just type !network and bot will reply with real time info about UFO Coin.'.chr(10).
-        'This bot does not require to be admin and it can be added in group'.chr(10).
+        'developed with ❤ by @docsimo85'.chr(10).chr(10).
+        '-COMMANDS-'.chr(10).
+        '!network - bot will reply with real time info about UFO Coin diff and block.'.chr(10).
+        '!price - bot will reply with USD and BTC current value.'.chr(10).
+        '!help - show this instructions.'.chr(10).chr(10).
+        'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
         'If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
     $parameters["method"] = "sendMessage";
 }
