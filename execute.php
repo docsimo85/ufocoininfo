@@ -38,7 +38,7 @@ else if (strpos($text,'!wallet') === 0) {
     if ($gruppo = 'private') {
         $wallet = explode(" ",$text);
         $walletclear = $wallet[1];
-        $urlcheckwallet = 'https://chainz.cryptoid.info/ufo/api.dws?q=getbalance&a='.$walletclear;
+        $urlcheckwallet = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=getbalance&a='.$walletclear);
         header("Content-Type: application/json");
         $parameters = array('chat_id' => $chatId, "text" =>
 //        '💰 UFO Coin Value 💰'.chr(10).chr(10).
