@@ -36,24 +36,25 @@ if($text == '!network'){
 }
 else if (strpos($text,'!wallet') === 0) {
     if ($gruppo = 'private') {
+        $wallet = explode(" ",$text);
+        $walletclear = $wallet[1];
+        $urlcheckwallet = 'https://chainz.cryptoid.info/ufo/api.dws?q=getbalance&a='.$walletclear;
         header("Content-Type: application/json");
         $parameters = array('chat_id' => $chatId, "text" =>
 //        '💰 UFO Coin Value 💰'.chr(10).chr(10).
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            '!wallet private rilevato'
+            '!wallet private rilevato '. json_decode($urlcheckwallet,true)
         );
         $parameters["method"] = "sendMessage";
     }
     else if ($gruppo = 'group') {
         header("Content-Type: application/json");
         $parameters = array('chat_id' => $chatId, "text" =>
-//        '💰 UFO Coin Value 💰'.chr(10).chr(10).
-//        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
-//        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
-//        '✅For info on this bot type !help'
-            '!wallet group rilevato'
+        '⛔ The !wallet command is avaible only in private chat to protect your privacy. ⛔'.chr(10).chr(10).
+        'Please tap on this bot and start a private chat to use !wallet command.'.chr(10).chr(10).
+        '✅For info on this bot type !help'
         );
         $parameters["method"] = "sendMessage";
     }
@@ -77,6 +78,8 @@ else if($text == '!help'){
         '!network - bot will reply with real time info about UFO Coin diff and block.'.chr(10).
         '!price - bot will reply with USD and BTC current value.'.chr(10).
         '!help - show this instructions.'.chr(10).chr(10).
+        '-PRIVATE CHAT COMMANDS-'.chr(10).
+        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance and rich rank'.chr(10).chr(10).
         'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
         '✅ If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
     $parameters["method"] = "sendMessage";
