@@ -35,7 +35,7 @@ if($text == '!network'){
 //$parameters["reply_markup"] = '{ "keyboard": [["uno", "due"], ["tre", "quattro"], ["cinque"]], "resize_keyboard": true, "one_time_keyboard": false}';
 }
 else if (strpos($text,'!wallet') === 0) {
-    if ($gruppo = 'private') {
+    if ($gruppo == 'private') {
         $wallet = explode(" ",$text);
         $urlcheckwallet = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=getbalance&a='.$wallet[1]);
         header("Content-Type: application/json");
@@ -44,11 +44,11 @@ else if (strpos($text,'!wallet') === 0) {
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            json_decode($wallet[1],true).json_decode($urlcheckwallet,true).'!wallet private rilevato '. json_decode($urlcheckwallet,true)
+            $wallet[1].$urlcheckwallet.'!wallet private rilevato '. $urlcheckwallet
         );
         $parameters["method"] = "sendMessage";
     }
-    else if ($gruppo = 'group') {
+    else if ($gruppo == 'group') {
         header("Content-Type: application/json");
         $parameters = array('chat_id' => $chatId, "text" =>
         '⛔ The !wallet command is avaible only in private chat to protect your privacy. ⛔'.chr(10).chr(10).
