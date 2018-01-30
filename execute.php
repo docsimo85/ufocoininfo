@@ -34,16 +34,29 @@ if($text == '!network'){
     $parameters["method"] = "sendMessage";
 //$parameters["reply_markup"] = '{ "keyboard": [["uno", "due"], ["tre", "quattro"], ["cinque"]], "resize_keyboard": true, "one_time_keyboard": false}';
 }
-else if (strpos($text,'!wallet') === 0){
-    header("Content-Type: application/json");
-    $parameters = array('chat_id' => $chatId, "text" =>
+else if (strpos($text,'!wallet') === 0) {
+    if ($gruppo = 'private') {
+        header("Content-Type: application/json");
+        $parameters = array('chat_id' => $chatId, "text" =>
 //        '💰 UFO Coin Value 💰'.chr(10).chr(10).
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-    '!wallet rilevato'
-    );
-    $parameters["method"] = "sendMessage";
+            '!wallet rilevato'
+        );
+        $parameters["method"] = "sendMessage";
+    }
+    else if ($gruppo = 'group') {
+        header("Content-Type: application/json");
+        $parameters = array('chat_id' => $chatId, "text" =>
+//        '💰 UFO Coin Value 💰'.chr(10).chr(10).
+//        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
+//        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
+//        '✅For info on this bot type !help'
+            '!wallet rilevato'
+        );
+        $parameters["method"] = "sendMessage";
+    }
 }
 else if($text == '!price'){
     header("Content-Type: application/json");
