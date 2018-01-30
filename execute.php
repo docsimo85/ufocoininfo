@@ -42,7 +42,7 @@ else if (strpos($text,'!wallet') === 0) {
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            '!wallet rilevato'
+            '!wallet private rilevato'
         );
         $parameters["method"] = "sendMessage";
     }
@@ -53,7 +53,7 @@ else if (strpos($text,'!wallet') === 0) {
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            '!wallet rilevato'
+            '!wallet group rilevato'
         );
         $parameters["method"] = "sendMessage";
     }
