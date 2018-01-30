@@ -1,5 +1,6 @@
 <?php
 $content = file_get_contents("php://input");
+//$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!wallet BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp"}}';
 $update = json_decode($content, true);
 if(!$update){
     exit;
@@ -19,7 +20,7 @@ $gruppo = $message['chat']['type'];
 $date = isset($message['date']) ? $message['date'] : "";
 $text = isset($message['text']) ? $message['text'] : "";
 $text = trim($text);
-$text = strtolower($text);
+//$text = strtolower($text);
 if($text == '!network'){
     header("Content-Type: application/json");
     $parameters = array('chat_id' => $chatId,
@@ -44,7 +45,7 @@ else if (strpos($text,'!wallet') === 0) {
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            $wallet[1].'!wallet private rilevato '. file_get_contents($urlcheckwallet)
+            'Current wallet balance: '. number_format(file_get_contents($urlcheckwallet),6,',','.')
         );
         $parameters["method"] = "sendMessage";
     }
@@ -78,7 +79,7 @@ else if($text == '!help'){
         '!price - bot will reply with USD and BTC current value.'.chr(10).
         '!help - show this instructions.'.chr(10).chr(10).
         '-PRIVATE CHAT COMMANDS-'.chr(10).
-        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance and rich rank'.chr(10).chr(10).
+        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance'.chr(10).chr(10).
         'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
         '✅ If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
     $parameters["method"] = "sendMessage";
