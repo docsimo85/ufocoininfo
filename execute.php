@@ -2,6 +2,7 @@
 $content = file_get_contents("php://input");
 //$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!network"}}';
 $update = json_decode($content, true);
+date_default_timezone_set('Europe/Berlin');
 if(!$update){
     exit;
 }
