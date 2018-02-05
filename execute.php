@@ -104,9 +104,9 @@ else if($text == '!info'){
         '🕳 UFO Coin Info Bot 🕳'.chr(10).
         'developed with ❤ by @docsimo85'.chr(10).chr(10).
         '-OFFICIAL SITE- https://ufocoin.net'.chr(10).
-        '-OFFICIAL BLOCKCHAIN EXPLORER- https://chainz.cryptoid.info/ufo/'.chr(10).chr(10).
-        '-OFFICIAL DISCORD CHANNEL - https://discord.gg/RP8hC3'.chr(10).
-        '⛏ MINERS INFO ⛏'.chr(10).
+        '-OFFICIAL BLOCKCHAIN EXPLORER- https://chainz.cryptoid.info/ufo/'.chr(10).
+        '-OFFICIAL DISCORD CHANNEL - https://discord.gg/RP8hC3'.chr(10).chr(10).
+        '⛏ MINING INFO ⛏'.chr(10).
         'Algo: Neoscrypt'.chr(10).
         'Recommended pool: https://pool.ufocoin.net/'.chr(10).
         'Recommended NVIDIA miner: https://github.com/tpruvot/ccminer/releases'.chr(10).
