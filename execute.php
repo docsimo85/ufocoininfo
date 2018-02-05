@@ -88,7 +88,7 @@ else if($text == '!help'){
         'developed with ❤ by @docsimo85'.chr(10).chr(10).
         '-COMMANDS-'.chr(10).
         '!network - bot will reply with real time info about UFO Coin diff and block.'.chr(10).
-        '!price - bot will reply with USD and BTC current value.'.chr(10).
+        '!price - bot will reply with USD/BTC current value and % change in 1hr / 24 hr / 7days.'.chr(10).
         '!help - show this instructions.'.chr(10).chr(10).
         '-PRIVATE CHAT COMMANDS-'.chr(10).
         '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance and rich rank'.chr(10).chr(10).
