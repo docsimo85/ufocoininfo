@@ -1,6 +1,6 @@
 <?php
 $content = file_get_contents("php://input");
-$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!network"}}';
+//$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!network"}}';
 $update = json_decode($content, true);
 if(!$update){
     exit;
@@ -13,7 +13,7 @@ $json4 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=circulati
 $json5 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=ticker.btc');
 $json6 = file_get_contents('https://api.coinmarketcap.com/v1/ticker/ufo-coin/');
 
-var_dump(json_decode($json6)[0]->id);die;
+//var_dump(json_decode($json6)[0]->id);die;
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
@@ -31,7 +31,7 @@ if($text == '!network'){
             '🌎 UFO Coin Real Time Info: 🌎'.chr(10).chr(10).
             'Current diff: '.json_decode($json,true).chr(10).
             'Current block: '.json_decode($json2,true).chr(10).
-            'Rank on CMC: '.json_decode($json6["id"],true).chr(10).
+            'Rank on CMC: '.json_decode($json6,true)[0]->id.chr(10).
             //'Current USD Value: '.json_decode($json3,true).chr(10).
             'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).chr(10).
             '✅For info on this bot type !help'
