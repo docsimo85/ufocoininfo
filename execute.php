@@ -50,8 +50,8 @@ else if (strpos($text,'!wallet') === 0) {
 //        'Current USD Value: '.number_format(json_decode($json3,true),5).chr(10).
 //        'Current BTC Value: '.number_format(json_decode($json5,true),5).chr(10).chr(10).
 //        '✅For info on this bot type !help'
-            '💰 Current wallet balance: '. number_format(file_get_contents($urlcheckwallet),6,',','.').chr(10).
-            '📉 Rich rank: '. number_format(file_get_contents($richlist),0,',','.').chr(10).chr(10).
+            '💰 Current wallet balance: '. number_format(file_get_contents($urlcheckwallet),6,',','.').chr(10).chr(10).
+//            '📉 Rich rank: '. number_format(file_get_contents($richlist),0,',','.').chr(10).chr(10).
             '✅For info on this bot type !help'
         );
         $parameters["method"] = "sendMessage";
@@ -91,7 +91,7 @@ else if($text == '!help'){
         '!price - bot will reply with USD/BTC current value and % change in 1hr / 24 hr / 7days.'.chr(10).
         '!help - show this instructions.'.chr(10).chr(10).
         '-PRIVATE CHAT COMMANDS-'.chr(10).
-        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance and rich rank'.chr(10).chr(10).
+        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance'.chr(10).chr(10).
         'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
         '✅ If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp');
     $parameters["method"] = "sendMessage";
