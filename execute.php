@@ -32,8 +32,8 @@ if($text == '!network'){
             'Current diff: '.json_decode($json,true).chr(10).
             'Current block: '.json_decode($json2,true).chr(10).
             //'Current USD Value: '.json_decode($json3,true).chr(10).
-            'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).chr(10).
-            'Rank on CMC: '.json_decode($json6)[0]->rank.chr(10).
+            'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).
+//            'Rank on CMC: '.json_decode($json6)[0]->rank.chr(10).
             '✅For info on this bot type !help'
     );
     $parameters["method"] = "sendMessage";
