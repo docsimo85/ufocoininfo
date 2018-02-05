@@ -32,7 +32,7 @@ if($text == '!network'){
             'Current diff: '.json_decode($json,true).chr(10).
             'Current block: '.json_decode($json2,true).chr(10).
             //'Current USD Value: '.json_decode($json3,true).chr(10).
-            'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).
+            'Circulating Coins: '.number_format(json_decode($json4,true)).chr(10).chr(10).
 //            'Rank on CMC: '.json_decode($json6)[0]->rank.chr(10).
             '✅For info on this bot type !help'
     );
@@ -73,9 +73,9 @@ else if($text == '!price'){
         'Current USD Value: '.number_format(json_decode($json6)[0]->price_usd,5).chr(10).
         'Current BTC Value: '.number_format(json_decode($json6)[0]->price_btc,8).chr(10).
         'Rank on CMC: '.json_decode($json6)[0]->rank.chr(10).
-        'Change 1 hr: '.json_decode($json6)[0]->percent_change_1h.' \%'.chr(10).
-        'Change 24 hr: '.json_decode($json6)[0]->percent_change_24h.' \%'.chr(10).
-        'Change 7 days: '.json_decode($json6)[0]->percent_change_7d.' \%'.chr(10).
+        'Change 1 hr: '.json_decode($json6)[0]->percent_change_1h.' %'.chr(10).
+        'Change 24 hr: '.json_decode($json6)[0]->percent_change_24h.' %'.chr(10).
+        'Change 7 days: '.json_decode($json6)[0]->percent_change_7d.' %'.chr(10).
 //        'Last update: '.json_decode($json6)[0]->last_updated.chr(10).chr(10).
         '✅For info on this bot type !help'
     );
