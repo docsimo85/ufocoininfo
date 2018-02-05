@@ -12,7 +12,7 @@ $json3 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=ticker.us
 $json4 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=circulating');
 $json5 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=ticker.btc');
 $json6 = file_get_contents('https://api.coinmarketcap.com/v1/ticker/ufo-coin/');
-var_dump($json6);die;
+var_dump($json6[id]);die;
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
