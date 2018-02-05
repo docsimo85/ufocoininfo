@@ -115,7 +115,8 @@ else if($text == '!info'){
 //        '-OFFICIAL WALLET VERSION 0.12-  '.chr(10).chr(10).
         '✅For info on this bot type !help'.chr(10),
         //parso in html per creare i link cliccabili
-        'parse_mode' => 'HTML');
+        'parse_mode' => 'HTML',
+        'disable_web_page_preview' => true,);
     $parameters["method"] = "sendMessage";
 }
 ;
