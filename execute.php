@@ -103,15 +103,18 @@ else if($text == '!info'){
     $parameters = array('chat_id' => $chatId, "text" =>
         '🕳 UFO Coin Info Bot 🕳'.chr(10).
         'developed with ❤ by @docsimo85'.chr(10).chr(10).
-        '-OFFICIAL SITE https://ufocoin.net-'.chr(10).
-        -'OFFICIAL BLOCKCHAIN EXPLORER https://chainz.cryptoid.info/ufo/-'.chr(10).
-        '!network - bot will reply with real time info about UFO Coin diff and block.'.chr(10).
-        '!price - bot will reply with USD/BTC current value and % change in 1hr / 24 hr / 7days.'.chr(10).
-        '!help - show this instructions.'.chr(10).chr(10).
-        '-PRIVATE CHAT COMMANDS-'.chr(10).
-        '!wallet yourufowalletaddresshere - bot will reply with your current wallet balance'.chr(10).chr(10).
-        'This bot does not require to be admin and it can be added in group'.chr(10).chr(10).
-        '✅ If you find it useful donations are welcome :) UFO Address: BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp',
+        '-OFFICIAL SITE- https://ufocoin.net'.chr(10).
+        '-OFFICIAL BLOCKCHAIN EXPLORER- https://chainz.cryptoid.info/ufo/'.chr(10).chr(10).
+        '-OFFICIAL DISCORD CHANNEL - https://discord.gg/RP8hC3'.chr(10).
+        '⛏ MINERS INFO ⛏'.chr(10).
+        'Algo: Neoscrypt'.chr(10).
+        'Recommended pool: https://pool.ufocoin.net/'.chr(10).
+        'Recommended NVIDIA miner: https://github.com/tpruvot/ccminer/releases'.chr(10).
+        'Recommended AMD miner: https://github.com/sgminer-dev/sgminer/releases'.chr(10).
+        'For more info on mining join us on our mining Discord channel!'.chr(10).chr(10).
+//        '-OFFICIAL WALLET VERSION 0.12-  '.chr(10).chr(10).
+        '✅For info on this bot type !help'.chr(10),
+        //parso in html per creare i link cliccabili
         'parse_mode' => 'HTML');
     $parameters["method"] = "sendMessage";
 }
