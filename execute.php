@@ -76,7 +76,7 @@ else if($text == '!price'){
         'Change 1 hr: '.json_decode($json6)[0]->percent_change_1h.' %'.chr(10).
         'Change 24 hr: '.json_decode($json6)[0]->percent_change_24h.' %'.chr(10).
         'Change 7 days: '.json_decode($json6)[0]->percent_change_7d.' %'.chr(10).chr(10).
-        'Last update: '.date("Y-m-d\TH:i:s\Z",json_decode($json6)[0]->last_updated).chr(10).chr(10).
+        'Last update: '.date("Y-m-d H:i:s",json_decode($json6)[0]->last_updated).chr(10).chr(10).
         '✅For info on this bot type !help'
     );
     $parameters["method"] = "sendMessage";
