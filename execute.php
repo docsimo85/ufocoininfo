@@ -75,7 +75,7 @@ else if($text == '!price'){
         'Rank on CMC: '.json_decode($json6)[0]->rank.chr(10).
         'Change 1 hr: '.json_decode($json6)[0]->percent_change_1h.' %'.chr(10).
         'Change 24 hr: '.json_decode($json6)[0]->percent_change_24h.' %'.chr(10).
-        'Change 7 days: '.json_decode($json6)[0]->percent_change_7d.' %'.chr(10).
+        'Change 7 days: '.json_decode($json6)[0]->percent_change_7d.' %'.chr(10).chr(10).
 //        'Last update: '.json_decode($json6)[0]->last_updated.chr(10).chr(10).
         '✅For info on this bot type !help'
     );
