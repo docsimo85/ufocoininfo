@@ -1,6 +1,6 @@
 <?php
 $content = file_get_contents("php://input");
-//$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!wallet BwJvr6HVnnsHRK7PArc72yrLXYEe52yAYp"}}';
+$content = '{"update_id":534691120,"message":{"message_id":264,"from":{"id":227853458,"is_bot":false,"first_name":"Simo","username":"docsimo85","language_code":"it-IT"},"chat":{"id":227853458,"first_name":"Simo","username":"docsimo85","type":"private"},"date":1517305698,"text":"!network"}}';
 $update = json_decode($content, true);
 if(!$update){
     exit;
@@ -12,6 +12,7 @@ $json3 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=ticker.us
 $json4 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=circulating');
 $json5 = file_get_contents('https://chainz.cryptoid.info/ufo/api.dws?q=ticker.btc');
 $json6 = file_get_contents('https://api.coinmarketcap.com/v1/ticker/ufo-coin/');
+var_dump($json6);die;
 $messageId = isset($message['message_id']) ? $message['message_id'] : "";
 $chatId = isset($message['chat']['id']) ? $message['chat']['id'] : "";
 $firstname = isset($message['chat']['first_name']) ? $message['chat']['first_name'] : "";
