@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="065e7333-b839-4fe7-ae04-8f84a2d7624f" name="co-tst-nfs02" url="http://co-tst-nfs-02.sj.local">
+        <fileTransfer host="co-tst-nfs-02.sj.local" port="22" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
